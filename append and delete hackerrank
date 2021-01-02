@@ -1,0 +1,18 @@
+#append and delete
+def appendAndDelete(s, t, k):
+    if len(s)+len(t)<k:
+        res="Yes"
+        return res
+    cnt=0
+    for i in range(min(len(s),len(t))):
+        if s[i]==t[i]:
+            cnt+=1
+        else:
+            break
+    nc=len(s)+len(t)-(2*cnt)
+    if (k-nc)%2==0 and k>=nc :
+        res="Yes"
+        return res
+    else:
+        res="No"
+        return res
