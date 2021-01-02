@@ -1,0 +1,8 @@
+# Complete the chocolateFeast function below.
+def chocolateFeast(n, c, m):
+    w=cnt=int(n/c)
+    while w>=m :
+        k=int(w/m)
+        cnt=cnt+k
+        w=(w%m)+k
+    return cnt
