@@ -1,0 +1,16 @@
+# Complete the stones function below.
+def stones(n, a, b):
+    n=n-1
+    m=0
+    l=[]
+    if a>b:
+        a=a+b
+	b=a-b
+	a=a-b
+    while n!=-1:
+        k=(n*a)+(m*b)
+        l.append(k)
+        n-=1
+        m+=1
+    l=list(dict.fromkeys(l))
+    return l
