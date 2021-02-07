@@ -1,0 +1,12 @@
+# Python program to compute sum of pairwise bit differences 
+  
+def sumBitDifferences(arr, n): 
+    res = 0  
+    for i in range(0, 32): 
+        cnt = 0
+        for j in range(0, n): 
+            if ( (arr[j] & (1 << i)) ): 
+                cnt+= 1
+        res += (cnt * (n - cnt) * 2); 
+      
+    return res 
