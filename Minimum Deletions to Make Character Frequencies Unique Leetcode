@@ -1,0 +1,17 @@
+class Solution:
+    def minDeletions(self, s: str) -> int:
+        l=list(s)
+        l1=set(l)
+        cnt=0
+        k=[]
+        for i in l1:
+            j=l.count(i)
+            while j in k:
+                j-=1
+                cnt+=1
+            if j==0:
+                continue
+            else:
+                k.append(j)
+
+        return cnt
