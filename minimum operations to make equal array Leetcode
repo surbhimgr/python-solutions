@@ -1,0 +1,15 @@
+class Solution:
+    def minOperations(self, n: int) -> int:
+        if n==1:
+            return 0
+        elif n==2:
+            return 1
+        elif n%2==0:
+            m=int(n/2)
+            res=(m*(2+(m-1)*2))/2
+        else:
+            m=int(n/2)
+            res=(m*(4+((m-1)*2)))/2
+        return int(res)
+
+        
