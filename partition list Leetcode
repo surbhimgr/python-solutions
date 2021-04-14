@@ -1,0 +1,22 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def partition(self, head: ListNode, x: int) -> ListNode:
+        bef=bh=ListNode(0)
+        aft=ah=ListNode(0)
+        while head:
+            if head.val<x:
+                bef.next=head
+                bef=bef.next
+            else:
+                aft.next=head
+                aft=aft.next
+            head=head.next
+        aft.next=None
+        bef.next=ah.next
+        return bh.next
+                
+        
