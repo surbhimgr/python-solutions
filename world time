@@ -1,0 +1,36 @@
+h=input()
+m=input()
+dic0=["zero","one","two","three","four","five","six","seven","eight","nine","ten"]
+dic1=["","","twenty","thirty","forty","fifty","sixty"]
+if int(m)>30:
+    if len(h)==1:
+        wh=dic0[int(h)+1]
+    else:
+        wh=dic1[int(int(h)/10)]+dic0[(int(h)%10)+1]
+    if m[0]=="0":
+        wm=dic0[60-int(m[1])]
+    else:
+        km=str(60-int(m))
+        wm=dic1[int(int(km)/10)]+dic0[int(km)%10]
+else:
+    if len(h)==1:
+        wh=dic0[int(h)]
+    else:
+        wh=dic1[int(int(h)/10)]+dic0[int(h)%10]
+    if m[0]=="0":
+        wm=dic0[int(m[1])]
+    else:
+        wm=dic1[int(int(m)/10)]+dic0[int(m)%10]
+if m=="00":
+        result=wh + " o'clock"
+elif 30>int(m)>0 and m!="15":
+    print(wm+" in minutes past "+wh)
+elif m=="15":
+    print("quarter past "+wh)
+elif m=="30":
+    print("half past "+wh)
+elif m=="45":
+    print("quarter to "+wh)
+else:
+    print(wm+" minutes to "+wh)
+print(result)
