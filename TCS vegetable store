@@ -1,0 +1,50 @@
+class Vegetable:
+    def __init__ (self,name,price,quantity):
+        self.name=name
+        self.price=price
+        self.quantity=quantity
+class Store:
+    def __init__(self,storeName,vegList):
+        self.storeName=storeName
+        self.vegList=vegList
+    def categorizeVegetablesAlphbetically(self):
+        
+        disc={}
+        for veg in vegList:
+            veg.name[0].lower()
+            a=veg.name[0]
+            if a in disc.keys():
+                disc[a].append(veg.name)
+            else:
+                disc[a]=[]
+                disc[a].append(veg.name)
+            disc[a].sort()
+        return disc
+    def filterVegetablesForPriceRange(self,min,max):
+        priceList=["0"]
+        for veg in vegList:
+            if min<veg.price<max:
+                priceList.append(veg.name)
+        priceList.sort()
+        return priceList
+n=int(input())
+vegList=[]
+for i in range(n):
+    name=input()
+    price=float(input())
+    quantity=int(input())
+    veg=Vegetable(name.lower(),price,quantity)
+    vegList.append(veg)
+storename=input()
+min=float(input())
+max=float(input())
+store1=Store(storename,vegList)
+disc=store1.categorizeVegetablesAlphbetically()
+priceList=[]
+pricelist=store1.filterVegetablesForPriceRange(min,max)
+for keys,value in disc.items():
+    print(keys)
+    for x in value:
+        print(x)
+for x in pricelist:
+        print(x)
