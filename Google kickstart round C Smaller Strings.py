@@ -1,3 +1,4 @@
+#gives TLE for 3rd test case
 cnt=0
 def ispalindrome(s):
     if s==s[::-1]:
