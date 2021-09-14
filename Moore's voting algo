@@ -1,0 +1,21 @@
+#moore's voting algo to find majority element
+arr=[2,3,2,4,2]
+cnt=0
+curr=arr[0]
+n=len(arr)
+for i in arr:
+    if curr==i:
+        cnt+=1
+    else:
+        cnt-=1
+    if cnt==0:
+        curr=i
+        cnt=1
+ans=0
+for i in arr:
+    if i==curr:
+        ans+=1
+if ans>n//2:
+    print(curr,"is majority element")
+else:
+    print("no majority element found")
