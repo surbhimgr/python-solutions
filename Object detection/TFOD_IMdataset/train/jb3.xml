@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>jb3.jpeg</filename>
+	<path>C:\Users\Surbhi\Downloads\Bags data\TFOD data\train\jb3.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>500</width>
+		<height>500</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>jutebag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>42</xmin>
+			<ymin>19</ymin>
+			<xmax>412</xmax>
+			<ymax>450</ymax>
+		</bndbox>
+	</object>
+</annotation>

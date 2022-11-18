@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>cb4.png</filename>
+	<path>C:\Users\Surbhi\Downloads\Bags data\TFOD data\train\cb4.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>337</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>clothbag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>11</xmin>
+			<ymin>117</ymin>
+			<xmax>324</xmax>
+			<ymax>424</ymax>
+		</bndbox>
+	</object>
+</annotation>
